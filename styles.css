@@ -334,12 +334,12 @@ h1 {
 }
 
 /* Content */
-.sk-hero-1-content {
+.hero-content {
   position: relative;
   z-index: 999;
   max-width: 820px;
   margin: 0 auto;
-  padding-bottom: 150px;
+  padding-bottom: 250px;
 }
 .hero-title { margin: 20px 0 24px; }
 .hero-disc { max-width: 640px; margin: 0 auto; }
@@ -363,6 +363,16 @@ h1 {
   pointer-events: none;
 }
 
+#interface-bg {
+  width: calc(100% + 8vw);
+  height: 80vh;
+  background-image: url(images/bg-building.png);
+  background-size: cover;
+  position: absolute;
+  left: -4vw;
+  background-position-y: 50%;
+}
+
 #interface {
   position: relative;
   background-size: cover;
@@ -370,11 +380,18 @@ h1 {
   background-repeat: no-repeat;
   padding: 40px;
   border-radius: 25px;
-  background: #dfdfdf6f;
-  backdrop-filter: blur(50px);
+  /*background: #dfdfdf6f; */
+  background: #e5e5e5b4; 
+  backdrop-filter: blur(10px);
   box-shadow: 0px 5px 15px #0000001f;
-      border: 2px solid white;
+  background-image: url(images/ui-bg.png);
+  background-size: contain;
 }
+
+#interface-wrapper {
+  top: -100px;
+}
+
 .sk-hero-1-db::before {
   content: '';
   position: absolute;
@@ -386,41 +403,34 @@ h1 {
 
 /* Grid layout */
 .sk-hero-1-db-img {
-  display: flex;
-  gap: 16px;
   position: relative;
   z-index: 1;
+  padding-left: 79px;
 }
 .sk-hero-1-db-img .left {
   display: grid;
-  gap: 16px;
   flex: 1;
-  grid-template-rows: 150px 498px;
-}
-.sk-hero-1-db-img .right {
-  width: 33%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
 }
 .sk-hero-1-db-img .row-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
   align-items: start;
+  gap: 16px;
 }
 .sk-hero-1-db-img .row-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
   align-items: start;
+  gap: 16px;
 }
 .sk-hero-1-db-img .row-3 {
   display: grid;
-  gap: 16px;
   align-items: start;
+  gap: 16px;
 }
 
 .sk-hero-1-db-img-single-border {
-  border: 1px solid rgba(255,255,255,0.55);
-  border-radius: 25px;
+  border-radius: 38px;
   background: rgba(255,255,255,0.30);
   height: 100%;
 }
